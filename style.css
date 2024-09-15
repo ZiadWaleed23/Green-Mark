@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+    font-family: 'Fira Sans', sans-serif;
+}
+:root{
+    --min-color: #ffffff; /* White */
+    --sc-color: #ff7f00; /* Orange */
+    --th-color: #008000; /* Green */
+    --bk-color: #000000; /* Black */
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 0.5rem;
+    font-size: 66%;
+}
+.heading{
+    margin: 5rem auto;
+    font-size: 3.5rem;
+    text-align: center;
+    color: var(--th-color); /* Green for headings */
+}
+.heading div{
+    display: inline-block;
+    border-bottom: 0.2rem solid var(--th-color);
+    width: 15rem;
+}
+.heading div:hover{
+    width: 25rem;
+}
+section{
+    padding: 3rem 9%;
+}
+header{
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3%;
+    background: rgba(0, 0, 0, 0.6); /* Black for header background */
+    z-index: 1001;
+}
+header .logo{
+    font-size: 3.5rem;
+    color: var(--min-color); /* White for the logo */
+    padding: 0.4rem;
+}
+header .navbar a{
+    margin: 0 0.8rem;
+    font-size: 1.9rem;
+    color: var(--min-color); /* White for navbar links */
+    padding: 0.4rem ;
+}
+header .navbar a:hover,
+header .fa-bars:hover{
+    color: #ff7f00; /* Green on hover */
+}
+header .fa-bars{
+    font-size: 2.8rem;
+    color: var(--min-color); /* White */
+    cursor: pointer;
+    display: none;
+}
+.home .home-slid .box{
+    position: relative;
+}
+.home .home-slid .box::before{
+    content: "";
+    background: rgba(0, 0, 0, 0.5); /* Black overlay */
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}  
+.home .home-slid .box .content{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50% , -50%);
+    color: var(--min-color); /* White for content */
+    text-align: center;
+}
+.home .home-slid .box .content h3{
+    font-size: 8rem;
+}
+.home .home-slid .box .content p{
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+strong{
+    color: var(--th-color); /* Green for strong text */
+}
+.about{
+    background: #eee;
+}
+.about .box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 7rem;
+}
+.about .box .image img{
+    width: 60rem;
+    height: 100%;
+    object-fit: cover;
+}
+.about .box .content h3{
+    color: var(--th-color); /* Green for headings */
+    font-size: 3.5rem;
+}
+.about .box .content p{
+    color: var(--th-color); /* Green for text */
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+.about .box .content div{
+    color: var(--th-color); /* Green */
+    font-size: 2.2rem;
+}
+.services .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+    gap: 0.8rem;
+    margin-top: 5rem;
+}
+.services .row .box{
+    text-align: center;
+    color: var(--min-color); /* White text */
+    padding: 4rem;
+    border-radius: 0.8rem;
+    background-color:#444; /* Orange for service box */
+}
+.services .row .box:hover{
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    background: #e4e4e4; /* White on hover */
+    color: var(--bk-color); /* Black text on hover */
+}
+.services .row .box i{
+    font-size: 5rem;
+}
+.services .row .box h3{
+    font-size: 2.5rem;
+    margin: 1.5rem 0;
+}
+.services .row .box p{
+    font-size: 2rem;
+}
+.contact .box{
+    display: grid; 
+    grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+    gap: 2rem;
+    text-align: center;
+}
+.contact .box i{
+    font-size: 3.8rem;
+    color: var(--sc-color); /* Orange for icons */
+}
+.contact .box div{
+    font-size: 2rem;
+    color: var(--th-color); /* Green for contact info */
+    margin: 1rem 0;
+}
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 8rem 0;
+}
+.footer{
+    background: var(--bk-color); /* Black footer background */
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+    justify-content: center;
+    color: var(--min-color); /* White text */
+}
+.footer{
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
+}
+
+/* media query  */
+@media(max-width:850px){
+    header .fa-bars{
+        display: block;
+    }
+    header .navbar{
+        position: fixed;
+        top: 1000rem; left: 0; 
+        text-align: center;
+        background: rgba(0, 0, 0, 0.6); /* Black */
+        width: 100%;
+    }
+    header .navbar.active{
+        top: 7.5rem;
+    }
+    header .navbar a{
+        display: block;
+        margin: 0.3rem 0;
+        padding: 1rem;
+        font-size: 2.6rem;
+        color: var(--min-color); /* White */
+    }
+    header .navbar a:hover{
+        background: var(--min-color); /* White on hover */
+    }
+    .about .box{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .about .box .image img{
+        width: 90%;
+    }
+    .services .row{
+        grid-template-columns: repeat(auto-fit,minmax(80%,1fr));
+    }
+    .contact .row{
+        flex-flow: column;
+    }
+    .contact .row iframe{
+        width: 100%;
+    }
+    .footer{
+        grid-template-columns: repeat(auto-fit,minmax(40%,1fr));
+    }
+}
+
+
+.SocialLinks{
+    padding:10px;
+    width:fit-content;
+    margin-left:auto;
+    margin-right:500px;
+    background-color: #e4e4e4;
+    border-radius: 30px;
+}
