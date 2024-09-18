@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
 
 *{
-    margin: 0; padding: 0;
+    margin: 0; 
+    padding: 0;
     box-sizing: border-box;
-    outline: none; border: none;
+    outline: none; 
+    border: none;
     text-decoration: none;
     text-transform: capitalize;
     transition: all 0.2s linear;
@@ -25,11 +27,6 @@ html{
     font-size: 3.5rem;
     text-align: center;
     color: var(--th-color); /* Green for headings */
-}
-.heading div{
-    display: inline-block;
-    border-bottom: 0.2rem solid var(--th-color);
-    width: 15rem;
 }
 .heading div:hover{
     width: 25rem;
@@ -97,6 +94,9 @@ header .fa-bars{
 strong{
     color: var(--th-color); /* Green for strong text */
 }
+#font , #font strong{
+    font-family: cursive;
+}
 .about{
     background: #eee;
 }
@@ -131,28 +131,7 @@ strong{
     gap: 0.8rem;
     margin-top: 5rem;
 }
-.services .row .box{
-    text-align: center;
-    color: var(--min-color); /* White text */
-    padding: 4rem;
-    border-radius: 0.8rem;
-    background-color:#444; /* Orange for service box */
-}
-.services .row .box:hover{
-    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
-    background: #e4e4e4; /* White on hover */
-    color: var(--bk-color); /* Black text on hover */
-}
-.services .row .box i{
-    font-size: 5rem;
-}
-.services .row .box h3{
-    font-size: 2.5rem;
-    margin: 1.5rem 0;
-}
-.services .row .box p{
-    font-size: 2rem;
-}
+
 .contact .box{
     display: grid; 
     grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
@@ -175,19 +154,178 @@ strong{
     gap: 2rem;
     margin: 8rem 0;
 }
-.footer{
-    background: var(--bk-color); /* Black footer background */
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 50px;
-    justify-content: center;
-    color: var(--min-color); /* White text */
+
+footer {
+    position: fixed;
+    bottom: 0;
 }
-.footer{
+
+@media (max-height:800px) {
+    footer {
+        position: static;
+    }
+}
+
+.footer-distributed {
+    background-color: #021208;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 30%;
+}
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
     margin: 0;
-    font-size: 16px;
-    padding: 7px;
 }
+
+
+.footer-distributed h3 span {
+    color: #53e01c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #e0ac1c;
+    text-decoration: none;
+    ;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+    background-color: #e0ac1c;
+    border-radius: 5px;
+}
+
+.footer-links a:hover {
+    color: #e0ac1c;
+}
+
+@media (max-width: 880px) {
+    .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+}       
+        
+
 
 /* media query  */
 @media(max-width:850px){
@@ -230,17 +368,117 @@ strong{
     .contact .row iframe{
         width: 100%;
     }
-    .footer{
-        grid-template-columns: repeat(auto-fit,minmax(40%,1fr));
+  
+}
+
+#services {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f7f7f7;
+}
+
+.carousel-container {
+    position: relative;
+    width: 90%; /* Increased width for larger images */
+    overflow: hidden;
+    max-width: 1000px; /* Adjusted for larger images */
+    margin: 0 auto;
+}
+
+.service-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.service-item {
+    flex: 1 1 50%; /* Show two items per row */
+    max-width: 50%; /* Adjusted to ensure two items per row */
+    padding: 20px;
+    text-align: center;
+}
+
+.service-item img {
+    padding: 40px;
+    height: 350px; /* Increased height for larger images */
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #021208;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Slightly larger shadow */
+}
+.service-item img:hover{
+    background-color: #176b3a;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #a1c7b1;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-item {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 }
 
 
-.SocialLinks{
-    padding:10px;
-    width:fit-content;
-    margin-left:auto;
-    margin-right:500px;
-    background-color: #e4e4e4;
-    border-radius: 30px;
+/* Scroll to Top Button */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background-color: #021208;
+    color: #ff7f00;
+    padding: 10px;
+    border: none;
+    border-radius: 30%;
+    font-size: 23px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensures it's above other content */
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+    background-color: #176b3a;
+}
+
+/* Optional: Add some animation when button becomes visible */
+#scrollTopBtn.show {
+    display: block;
+    opacity: 1;
+}
+
+
+
+/* Container for the logos */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns everything to the left */
+}
+
+
+/* Style for the image logo */
+.logo-image {
+    height: 50px; /* Adjust the height as necessary */
+    width: auto;  /* Keep the aspect ratio */
+    float: left;  /* Aligns to the left */
 }
