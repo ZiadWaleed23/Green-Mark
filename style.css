@@ -446,9 +446,10 @@ footer {
     right: 30px;
     background-color: #021208;
     color: #ff7f00;
+    width: 45px;
     padding: 10px;
     border: none;
-    border-radius: 30%;
+    border-radius: 20%;
     font-size: 23px;
     cursor: pointer;
     display: none; /* Hidden by default */
@@ -457,7 +458,7 @@ footer {
 }
 
 #scrollTopBtn:hover {
-    background-color: #176b3a;
+    background-color: #0f4124;
 }
 
 /* Optional: Add some animation when button becomes visible */
