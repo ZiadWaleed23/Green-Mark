@@ -52,3 +52,14 @@ Fabars.onclick = () =>{
             behavior: 'smooth'
         });
     }
+
+    // Wait for the page to fully load
+window.addEventListener("load", function () {
+    // Hide the preloader
+    const preloader = document.getElementById("preloader");
+    preloader.style.display = "none";
+  
+    // Show the main content
+    const content = document.getElementById("content");
+    content.style.display = "block";
+  });
